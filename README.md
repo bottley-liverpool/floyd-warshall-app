@@ -76,4 +76,4 @@ python -m unittest
 - **Brad Ottley** - *For the University of Liverpool* - [bottley-liverpool](https://github.com/bottley-liverpool)
 
 #### License
-This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/bottley-liverpool/floyd-warshall-app/docs/LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/bottley-liverpool/floyd-warshall-app/blob/main/docs/LICENSE.md) file for details
