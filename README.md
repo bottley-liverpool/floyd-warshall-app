@@ -21,6 +21,9 @@ This Streamlit application demonstrates the Floyd-Warshall algorithm, focusing o
 - **Display Results**: Visual outputs for adjacency matrices and result matrices along with cycle detection results.
 - **Performance Testing**: Comparative execution times are displayed for iterative vs. recursive implementations.
 
+### Demo Streamlit App
+You can test the demo app at this url: [https://floyd-warshall-app.streamlit.app/](https://floyd-warshall-app.streamlit.app/)
+
 #### Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
