@@ -1,7 +1,7 @@
 ### Floyd-Warshall Algorithm App
 
 #### Overview
-This Streamlit application demonstrates the Floyd-Warshall algorithm, focusing on comparing the performance between the iterative and recursive implementations. The application offers a simple user interface to interact with the algorithm's features, including:
+This Streamlit application demonstrates the Floyd-Warshall algorithm, comparing the performance between the iterative and recursive implementations. The application offers a simple user interface to interact with the algorithm's features, including:
 
 - **Basic demonstration**: Visualizing the algorithm using both iterative and recursive implementations.
 - **Negative cycle detection**: Checking graphs for the presence of negative cycles.
@@ -31,7 +31,7 @@ These instructions will get you a copy of the project up and running on your loc
 - Python 3.7 or higher
 - Streamlit
 - Matplotlib
-- Numpy
+- Coverage
 
 ##### Installation
 1. Clone the repository:
@@ -57,16 +57,18 @@ cd src
 streamlit run app.py
 ```
 
-##### Running the Unit Tests
-1. Navigate to the tests directory:
+##### Running the Tests
+1. Run the tests using Unittest:
 ```bash
-cd tests
+python3 -m unittest
 ```
-Run the unit tests using Unittest:
+2. Get the test coverage:
 ```bash
-python -m unittest
+coverage run -m unittest   
 ```
-
+```bash
+coverage report 
+```
 #### Usage
 - **Mode Selection**: Use the sidebar to select between different modes (Basic, Negative Cycle Detection, Performance Testing).
 - **Graph Settings**: Adjust the number of nodes and toggle negative weights as needed.
