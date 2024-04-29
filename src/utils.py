@@ -25,7 +25,12 @@ def generate_random_graph(num_nodes, allow_negative=False, max_weight=10):
     return graph
 
 def plot_performance(data):
-    """Plot the performance data using Matplotlib."""
+    """
+    Plot the performance data using Matplotlib.
+
+    :param data: dict performance data
+    :return: matplotlib figure object containing the plotted performance comparison.
+    """
     fig, ax = plt.subplots()
     ax.plot(data['sizes'], data['iterative_times'], label='Iterative', marker='o')
     ax.plot(data['sizes'], data['recursive_times'], label='Recursive', marker='x')
