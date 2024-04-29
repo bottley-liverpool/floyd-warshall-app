@@ -1,7 +1,7 @@
-### README for Floyd-Warshall Algorithm App
+### Floyd-Warshall Algorithm App
 
 #### Overview
-This Streamlit application demonstrates the Floyd-Warshall algorithm, focusing on calculating the shortest paths between nodes in a graph and detecting negative cycles. The application offers a simple user interface to interact with the algorithm's features, including:
+This Streamlit application demonstrates the Floyd-Warshall algorithm, focusing on comparing the performance between the iterative and recursive implementations. The application offers a simple user interface to interact with the algorithm's features, including:
 
 - **Basic demonstration**: Visualizing the algorithm using both iterative and recursive implementations.
 - **Negative cycle detection**: Checking graphs for the presence of negative cycles.
@@ -27,11 +27,13 @@ These instructions will get you a copy of the project up and running on your loc
 ##### Prerequisites
 - Python 3.7 or higher
 - Streamlit
+- Matplotlib
+- Numpy
 
 ##### Installation
 1. Clone the repository:
 ```bash
-   git clone https://github.com/yourusername/floyd-warshall-app.git
+git clone https://github.com/yourusername/floyd-warshall-app.git
 ```
 2. Navigate to the project directory:
 ```bash
@@ -68,7 +70,7 @@ python -m unittest
 - **View Results**: Interact with the buttons to generate graphs and run algorithms. Results will be displayed on the main panel.
 
 #### Authors
-- **Brad Ottley** - *For the University of Liverpool* - [YourUsername](https://github.com/yourusername)
+- **Brad Ottley** - *For the University of Liverpool* - [bottley-liverpool](https://github.com/bottley-liverpool)
 
 #### License
-This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/yourusername/floyd-warshall-app/docs/LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/bottley-liverpool/floyd-warshall-app/docs/LICENSE.md) file for details
