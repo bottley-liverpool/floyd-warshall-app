@@ -1,0 +1,20 @@
+floyd-warshall-app/
+│
+├── src/
+│   ├── app.py
+│   └── algorithms.py
+│   └── utils.py
+│
+├── tests/
+│   ├── test_app.py
+│   ├── test_algorithms.py
+│   └── test_utils.py
+│
+├── docs/
+│   ├── LICENSE.md
+│   ├── project_specifications.md
+│   └── directory_tree.txt
+│
+├── .gitignore
+├── README.md
+└── requirements.txt
