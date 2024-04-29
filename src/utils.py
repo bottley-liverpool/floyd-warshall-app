@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """
 Utility functions for the Floyd-Warshall Algorithm Streamlit app.
 

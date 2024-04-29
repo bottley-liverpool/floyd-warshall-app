@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """
 Test suite for validating the functionality of the Streamlit application.
 """
@@ -12,7 +13,7 @@ class TestStreamlitApp(unittest.TestCase):
 
     def setUp(self):
         """Initialize AppTest and run the Streamlit app."""
-        self.at = AppTest.from_file("app.py")
+        self.at = AppTest.from_file("../app.py", default_timeout=5)
         self.at.run()
 
     def test_mode_selection_demo(self):

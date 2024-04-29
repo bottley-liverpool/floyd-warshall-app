@@ -1,0 +1,12 @@
+Name                           Stmts   Miss  Cover
+--------------------------------------------------
+src/__init__.py                    0      0   100%
+src/algorithms.py                 42      0   100%
+src/app.py                        58      2    97%
+src/tests/__init__.py              0      0   100%
+src/tests/test_algorithms.py      28      1    96%
+src/tests/test_app.py             24      1    96%
+src/tests/test_utils.py           35      0   100%
+src/utils.py                      19      0   100%
+--------------------------------------------------
+TOTAL                            206      4    98%

@@ -1,10 +1,11 @@
+#!/usr/bin/env python3
 """
 Streamlit Application for Demonstrating the Floyd-Warshall Algorithm.
 """
 import numpy as np
 import streamlit as st
-import algorithms as algo
-from utils import generate_random_graph, plot_performance
+from src.algorithms import floyd_warshall_iterative_performance, floyd_warshall_recursive_performance, detect_negative_cycle
+from src.utils import generate_random_graph, plot_performance
 
 def main():
     """
@@ -12,6 +13,13 @@ def main():
     Provides interactive controls for selecting demonstration mode, generating graphs,
     executing algorithms, and viewing results.
     """
+
+    # Initialise the session state
+    if 'graph' not in st.session_state:
+        st.session_state['graph'] = None
+    if 'performance_data' not in st.session_state:
+        st.session_state['performance_data'] = None
+
     st.title("Floyd-Warshall Algorithm")
 
     # Sidebar configuration
@@ -54,14 +62,14 @@ def main():
 
         if st.button('Run Algorithm', key="run_algorithm"):
             if implementation == "Iterative":
-                result, duration = algo.floyd_warshall_iterative_performance(st.session_state.graph)
+                result, duration = floyd_warshall_iterative_performance(st.session_state.graph)
             else:
-                result, duration = algo.floyd_warshall_recursive_performance(st.session_state.graph)
+                result, duration = floyd_warshall_recursive_performance(st.session_state.graph)
             st.write("Resulting Distance Matrix:", result)
             st.write(f"{implementation} Execution Time: {duration:.6f} seconds")
 
             if mode == "Negative Cycle Detection":
-                if algo.detect_negative_cycle(result):
+                if detect_negative_cycle(result):
                     st.error("A negative cycle has been detected in the graph.")
                 else:
                     st.success("No negative cycles detected.")
@@ -80,8 +88,8 @@ def perform_performance_testing(num_nodes):
     iterative_times, recursive_times, sizes = [], [], range(3, num_nodes + 1)
     for size in sizes:
         graph = generate_random_graph(size)
-        _, it_time = algo.floyd_warshall_iterative_performance(graph)
-        _, rec_time = algo.floyd_warshall_recursive_performance(graph)
+        _, it_time = floyd_warshall_iterative_performance(graph)
+        _, rec_time = floyd_warshall_recursive_performance(graph)
         iterative_times.append(it_time)
         recursive_times.append(rec_time)
 

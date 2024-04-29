@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """
 Implementation of the Floyd-Warshall algorithm and related functions for the Streamlit app.
 

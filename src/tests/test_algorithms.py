@@ -1,9 +1,10 @@
+#!/usr/bin/env python3
 """
 Test suite for the Algorithms module
 """
 import unittest
 import numpy as np
-import algorithms as algo
+from ..algorithms import floyd_warshall_iterative, floyd_warshall_recursive, detect_negative_cycle
 
 class TestFloydWarshallAlgorithms(unittest.TestCase):
     """
@@ -21,7 +22,7 @@ class TestFloydWarshallAlgorithms(unittest.TestCase):
             [5, 0, 1],
             [4, 7, 0]
         ])
-        result = algo.floyd_warshall_iterative(weights)
+        result = floyd_warshall_iterative(weights)
         np.testing.assert_array_equal(result, expected)
 
     def test_floyd_warshall_recursive(self):
@@ -36,7 +37,7 @@ class TestFloydWarshallAlgorithms(unittest.TestCase):
             [5, 0, 1],
             [4, 7, 0]
         ])
-        result = algo.floyd_warshall_recursive(weights)
+        result = floyd_warshall_recursive(weights)
         np.testing.assert_array_equal(result, expected)
 
     def test_detect_negative_cycle(self):
@@ -48,17 +49,17 @@ class TestFloydWarshallAlgorithms(unittest.TestCase):
             [-1, np.inf, 0]
         ])
         # Run the Floyd-Warshall algorithm to compute the shortest paths
-        dist = algo.floyd_warshall_iterative(weights)
+        dist = floyd_warshall_iterative(weights)
         # Check if the resulting distance matrix indicates a negative cycle
-        self.assertTrue(algo.detect_negative_cycle(dist))
+        self.assertTrue(detect_negative_cycle(dist))
 
     def test_empty_graph(self):
         """Test an empty graph"""
         weights = np.array([[]])
         expected = np.array([[]])
-        result = algo.floyd_warshall_iterative(weights)
+        result = floyd_warshall_iterative(weights)
         np.testing.assert_array_equal(result, expected)
-        result = algo.floyd_warshall_recursive(weights)
+        result = floyd_warshall_recursive(weights)
         np.testing.assert_array_equal(result, expected)
 
 if __name__ == '__main__':

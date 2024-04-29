@@ -1,10 +1,11 @@
+#!/usr/bin/env python3
 """
 Test suite for validating the utility functions.
 """
 import unittest
 import numpy as np
 import matplotlib.pyplot as plt
-from utils import generate_random_graph, plot_performance
+from ..utils import generate_random_graph, plot_performance
 
 class TestGenerateRandomGraph(unittest.TestCase):
     """
