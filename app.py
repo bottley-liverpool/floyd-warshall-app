@@ -4,8 +4,8 @@ Streamlit Application for Demonstrating the Floyd-Warshall Algorithm.
 """
 import numpy as np
 import streamlit as st
-from src.algorithms import floyd_warshall_iterative_performance, floyd_warshall_recursive_performance, detect_negative_cycle
-from src.utils import generate_random_graph, plot_performance
+from algorithms import floyd_warshall_iterative_performance, floyd_warshall_recursive_performance, detect_negative_cycle
+from utils import generate_random_graph, plot_performance
 
 def main():
     """
