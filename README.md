@@ -22,7 +22,7 @@ This Streamlit application demonstrates the Floyd-Warshall algorithm, comparing 
 - **Performance Testing**: Comparative execution times are displayed for iterative vs. recursive implementations.
 
 ### Demo Streamlit App
-You can test the demo app at this url: [https://floyd-warshall-app.streamlit.app/](https://floyd-warshall-app.streamlit.app/)
+You can test the demo app at this url: [Demo App](https://bottley-liverpool-floyd-warshall-app-app-initial-deploym-jx75cu.streamlit.app/)
 
 #### Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
